@@ -3,11 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background: linear-gradient(180deg, #012030 0%, #11114E 100%);
+    min-height: 100vh;
     color: #DCDCDC;
     padding: 0 5vw;
-    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -30,65 +31,20 @@ li {
     font-weight: 500;
     flex-wrap: wrap;
 }
-li a {
+ li a {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-li a:hover {
+ li a:hover {
     color: #0077ff;
     text-shadow: 0 0 10px rgba(0,180,255,0.7);
 }
+
 .logo {
     font-size: 28px;
     color: #0059FF;
     letter-spacing: 2px;
     font-family: "Pattaya";
-}
-.profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-.profile-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    background: rgba(31,78,255,0.15);
-    padding: 20px;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 800px;
-}
-.profile-info img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.profile-info div {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.profile-info h2 {
-    font-size: 28px;
-    margin: 0;
-}
-.profile-info p {
-    font-size: 16px;
-    margin: 0;
-}
-.profile-info button{
-    border: none;
-    border-radius: 30px;
-    background-color: #0059FF;
-    width: 50%;
-    color: #DCDCDC;
-    padding: 10px;
-    cursor: pointer;
 }
 .search {
     width: 100%;
@@ -191,13 +147,11 @@ li a:hover {
 .ver-mais img.plus {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .ver-mais:hover img.plus {
     transform: rotate(90deg) scale(1.2);
     filter: brightness(120%);
     cursor: pointer;
 }
-
 h3 {
     text-shadow: 0 4px 4px rgba(77, 77, 77, 0.74);
     font-family: Kanit;
@@ -205,6 +159,10 @@ h3 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+h2 {
+    font-size: 46px;
+    margin-top: 30px;
 }
 footer {
     height: 80px;
@@ -217,12 +175,11 @@ footer {
 }
 @media(max-width:768px){
     body { padding: 0 20px; }
-    .nav-menu { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .nav-menu { flex-direction: column; align-items: flex-start; gap: 15px;}
     .nav-itens li { font-size: 16px;}
     .intro ul { font-size: 16px; }
     .card-container { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
     .icon { width: 30px; height: 30px; }
+    h2 { font-size: 36px;}
     footer p { font-size: 12px;}
-    .profile-info h2 {font-size: 22px;}
-    .profile-info p {font-size: 14px;}
 }
